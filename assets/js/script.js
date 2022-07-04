@@ -2,9 +2,9 @@
 
 */
 const progressBar = document.querySelector('.progress-bar');
-const prev = document.querySelector('.previous-button a');
-const next = document.querySelector('.next-button a');
-const pages = document.querySelectorAll('.pagination li');
+const prev = document.querySelector('.previous-button > a');
+const next = document.querySelector('.next-button > a');
+const pages = document.querySelectorAll('.pagination > li');
 
 var currentActive = 1;
 
@@ -17,9 +17,14 @@ next.addEventListener('click',() => {
 })
 
 prev.addEventListener('click',() => {
-    currentActive--;
-    if(currentActive < 1){
-        currentActive = 1;
+     
+    if(currentActive <= pages.length){
+        if(currentActive === 1){
+            currentActive = 1
+        }else{
+            currentActive--; 
+
+        }
     }
     update();
 })
@@ -33,17 +38,17 @@ function update(){
         }
     })
 
-    var activePages = document.querySelectorAll('.active')
 
     progressBar.style.width = (activePages.length-1) / (pages.length-1)*100 + '%';
 
+
     if(currentActive === 1){
-        prev.disabled = true;
-    }else if (currentActive === pages.length){
-        next.disabled = true;
+        prev.classList.add('disabled');
+    }else if(currentActive === pages.length){
+        next.classList.add('disabled');
     }else{
-        prev.disabled = false;
-        next.disabled = false;
+        prev.classList.remove('disabled');
+        next.classList.remove('disabled');
     }
 }
 
