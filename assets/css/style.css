@@ -100,7 +100,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 30.37%; 
   margin: 0 auto;
 }
 /*=================================
@@ -115,15 +115,18 @@ li {
 =================================*/
 body{
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #f6f7fb;
 }
 
 ul.progress {
   display: flex;
   justify-content: space-between;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  left: 0;
 }
 
 
