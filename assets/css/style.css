@@ -100,7 +100,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 30.37%; 
+  width: 27.37%; 
   margin: 0 auto;
 }
 /*=================================
@@ -125,42 +125,77 @@ ul.pagination {
 
 .container {
   position: relative;
-  top: 50%;
+  top: 42%;
   left: 0;
 }
-.wrapper{
+
+.wrapper {
   position: relative;
+  top: 0;
+  left: 0.5%;
+  overflow: hidden;
 }
 
 .progress-container::before {
-  content: "";
-  background-color: #e0e0e0;
-  position: absolute;
-  top: 20%;
-  left: 0;
-  transform: translateY(-20%);
-  z-index: -1;
   height: 4px;
   width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  left: 0;
+  background-color: #e0e0e0;
+  content: "";
+  transform: translateY(-10%);
   transition: 0.4s ease;
 }
+
 .progress-bar {
-  background-color: #3498db;
-  position: absolute;
-  top: 20%;
-  left: 0;
-  transform: translateY(-20%);
-  z-index: -1;
   height: 4px;
   width: 0%;
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  left: 0;
+  background-color: #3498db;
+  transform: translateY(-10%);
   transition: 0.4s ease;
 }
 
+.pagination li {
+  padding: 4px 2.5%;
+  border: 3px solid #e0e0e0;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #a69cad;
+  transition: 0.4s ease;
+}
 
+li.active {  border-color: #3498db; }
+.buttons li {  flex-basis: 36%; }
 
+a {
+  padding: 9px 30%;
+  border: 1px solid;
+  border-radius: 6px;
+  background-color: #3d98db;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 14px;
+}
 
+ul.buttons {
+  padding: 32px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
 
+a:active{  transform: scale(0.97);  }
 
+a:disabled{
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
 
 /*=================================
   main styling ends here
