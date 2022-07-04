@@ -151,7 +151,7 @@ ul.pagination {
 
 .progress-bar {
   height: 4px;
-  width: 0%;
+  width: 0;
   position: absolute;
   z-index: -1;
   top: 10%;
@@ -190,9 +190,9 @@ ul.buttons {
   justify-content: center;
 }
 
-a:active{  transform: scale(0.97);  }
+.active{  transform: scale(0.97);  }
 
-a:disabled{
+.disabled{
   background-color: #e0e0e0;
   cursor: not-allowed;
 }
